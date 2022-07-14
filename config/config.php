@@ -1,6 +1,6 @@
 <?php
 // URL de base du serveur
-const BASE_SERVEUR = 'http://[hostname].[domain]:[port]/';
+const BASE_SERVEUR = '';
 
 // Config de la BD
 const BD_HOTE = 'localhost';
