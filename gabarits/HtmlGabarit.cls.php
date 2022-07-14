@@ -1,4 +1,5 @@
 <?php
+// Importer les symboles de leurs namespaces
 use \Twig\Environment;
 use \Twig\Loader\FilesystemLoader;
 
@@ -13,7 +14,7 @@ class HtmlGabarit
     {
         $this->module = $module;
         $this->action = $action;
-
+        // Instance de l'engin de gabarit Twig
         $this->twig = new Environment(new FilesystemLoader(['vues/']), []);
     }
 
@@ -28,11 +29,6 @@ class HtmlGabarit
  
     public function genererVue() 
     {
-        // extract($this->variables);  // Voir la documentation 
-        // include("vues/entete.inc.php");
-        // include("vues/$this->module.$this->action.php");
-        // include("vues/pied2page.inc.php");
-
         $this->twig->display("$this->module.$this->action.twig", $this->variables);
     }
 }
